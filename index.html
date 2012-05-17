@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+<!--    <script src="js/less-1.3.0.min.js" type="text/javascript"></script> -->
+<script src="js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<title>:nth</title>
+	<meta name="viewport" content="width=device-width">
+
+
+
+</head>
+<body>
+		<div class="container home">
+			<header class="reg r3-9">
+				<hgroup>	
+				
+					<h1 class="nth-logo">:nth <sup> beta </sup></h1>			
+					<p><a href="css/nth.less" class="action mh">Download :nth</a></p>
+					
+				</hgroup>
+			
+			
+			<article class="intro">
+			
+				<p>:nth is a modular system designed to help explore, design, prototype, build grids and layouts for online content.</p>  
+				<p>As the web evolves at an impressive pace it wants to be everywhere. All those "everywheres" come in different shapes and sizes.</p>
+				<p>:nth is an experimental tool inspired by new methodologies, processes and frameworks that are trying to address ever changing requirements.</p>
+				
+			</article>
+			</header>
+				<section class="reg r4 icons">
+					<article>
+						<figure>
+							<img src="imgs/grid.png" alt="Grid">
+							<h2>The Grid</h2>
+						</figure>	
+						<p>:nth uses a twelve column grid as a base, which allows a variety of divisions and multiple combinations for the space to be organised. :nth uses some of those combinations as region types that determine how individual modules are rendered.</p>
+					</article>
+					
+					<article>
+						<figure>
+							<img src="imgs/container.png" alt="Container" />
+							<h2>Region</h2>
+						</figure>
+						<p>Any html element can be turned into a region by adding .reg class. :nth will render it's immidiate children using the region's type. For example, .r2 class will divide the region in half, while .r3 into thirds.</p>
+					</article>
+					<article>
+						<figure>
+							<img src="imgs/module.png" alt="Module" />
+							<h2>Module</h2>
+						</figure>
+						<p>Any element renders as a module if it's direct parent is a region. It's size and position is determined by the type of the region. For example, all immidiate children of an .r4 region will use ~25% of the region's width.</p>
+					</article>
+					<article>
+						<figure>
+							<img src="imgs/staticfluid.png" width="300" height="300" alt="Staticfluid">
+							<h2>Staticfluid</h2>
+						</figure>
+						<p>The grid can be fluid or static. Additionally, max-width, min-width and % based width can be used to determine 'staticfluid' properties within a specified range. Magic! </p>
+					</article>
+					<article>
+						<figure>
+							<img src="imgs/mediaqueries.png" alt="MQ">
+							<h2>Media queries</h2>
+						</figure>
+						<p>Media queries can be used to change the grid's 'staticfluid' properties and/or change the type of any region depending on device or any other context.</p>
+					</article>
+					
+					<article>
+						<figure>
+							<img src="imgs/lefttoright3.png" alt="left-to-right">
+							<h2>Left to right</h2>
+						</figure>
+						<p>Responsive design demands a different approach to information architecture. With :nth, thinking left to right aids design decisions.</p>			
+					</article>
+					
+					<article>
+						<figure>
+							<img src="imgs/fold.png" alt="Fold">
+							<h2>Fold / unfold</h2>
+						</figure>
+						<p>Fluid alone is not enough to build responsive layouts. Switching in between 2, 3 or 4 columns is easy when information flows from left to right. </p>
+					</article>
+					<article>
+						<figure>
+							<img src="imgs/nest.png" alt="nest">
+							<h2>Nest</h2>
+						</figure>
+						<p>It's possible to nest regions within modules. This can be very helpful when creating more complex grids and when  precise folding / unfolding is required.</p>
+					</article>
+					<article>
+						<figure>
+							<img src="imgs/stack.png" alt="stack">
+							<h2>Stack</h2>
+						</figure>
+						<p>There's no real limit to how many modules can be stored within a region. They will all render as defined by the region's type in multiple rows. </p>
+					</article>
+					
+					<article>
+						<figure>
+							<img src="imgs/inout.png" alt="stack">
+							<h2>In. Not out.</h2>
+						</figure>
+						<p>:nth encourages IE 5 box-model. All :nth elements use CSS box-sizing:border-box; which handles a module's paddings &amp; borders without disturbing the order. It's :nth's way of adding % with pixels.</p>
+					</article>
+					<article>
+						<figure>
+							<img src="imgs/less.png" alt="stack">
+							<h2>Use less</h2>
+						</figure>
+						<p>:nth is distributed as a less file. Using less allows more control over layouts and all mentioned properties of :nth.</p>
+					</article>
+					<article>
+						<figure>
+							<img src="imgs/whatsnext.png" alt="what's next?">
+							<h2>What's next?</h2>
+						</figure>
+						<p>
+							<a href="css/nth.less">Download &amp; play with :nth</a>
+						</p>
+						<p>	
+							<a href="http://twitter.com/nthcss">Stay tuned @nthcss</a>
+						</p>
+							
+						
+					</article>
+				</section>
+
+	</div>	
+		
+</body>
+</html>

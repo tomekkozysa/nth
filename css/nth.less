@@ -1,0 +1,305 @@
+/* 
+	a quick reset. use what you like. 
+*/
+*{margin:0;padding:0;}
+
+/* percentge setting for the gutter, interesting possibilities are created with gutter 0 and padding applied instead */
+
+@gutter_width : 0;
+@gutter_in:10px;
+
+/* 
+		for now is best to keep below setting, 
+		it may make sense in the future to experiment.
+*/
+
+@column_count : 12;
+
+
+/*
+ 		a tiny bit of branding here:
+
+*/
+
+
+
+// this function calculates % of given number of columns
+
+.get_size(@cols){
+		
+		@column_width : 100/(@column_count/@cols);
+		@gutter_count : (@column_count/@cols) - 1;
+		@width_value  : @column_width - (@gutter_count * @gutter_width / ( @column_count / @cols ));
+		width: percentage(@width_value / 100);
+		
+}
+
+.container{ 	
+		-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+}
+
+.reg{ 			
+		
+		overflow:hidden;
+		width: 100%;
+		-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+}
+
+.reg img{
+	display:block;
+	-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+	width:100%;
+}
+
+
+
+// kind of reset class, helps with media queries overwrites
+
+.defaultreg{
+
+//	this a weird one,
+//	but it is required to reset clear value with clear:none;
+//	oterwise it's not overwritten with mq's
+
+	clear:none;
+	float:left;
+	margin-right:percentage(@gutter_width / 100);
+// not sure of that's needed below.
+	-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+}
+
+
+
+// default module styling. 
+.reg > *{		
+				
+				
+				display:block;
+				.defaultreg;
+				margin-right:percentage(@gutter_width / 100);	
+				padding:0 @gutter_in;
+				//border-right:1px solid red;
+				//height:100%;
+				
+}
+
+.reg > *.reg{
+
+// reset for nested stuff. 
+
+	padding:0;
+	
+}
+
+//.reg.reverse > *{float:right}
+
+.newline{
+	margin-right:0;
+//	border:0;
+//	float:right;
+}
+/*
+
+basic modules:
+
+*/
+
+.r1 {	
+		& > *:nth-child(n){.get_size(12);.newline}
+}
+
+.r2  {
+		& > *:nth-child(n){.get_size(6);.defaultreg}
+		& > *:nth-child(2n+2){.newline}
+		& > *:nth-child(2n+1){clear:left;}
+}
+
+.r3  {
+		& > *:nth-child(n){.get_size(4);.defaultreg}
+		& > *:nth-child(3n+3){.newline}
+		& > *:nth-child(3n+1){clear:left;}
+}
+
+
+.r4  {
+		& > *:nth-child(n){ .get_size(3); .defaultreg }
+		& > :nth-child(4n+4){.newline}
+		& > :nth-child(4n+1){clear:left;}
+}
+
+.r6{
+		& > *:nth-child(n){.get_size(2);.defaultreg}
+		& > :nth-child(6n+6){.newline}
+		& > :nth-child(6n+1){clear:left;}
+}
+.r12{
+		& > *:nth-child(n){ .get_size(1);.defaultreg}
+		& > :nth-child(12n+12){.newline}
+		& > :nth-child(12n+1){clear:left;}
+}
+
+/*
+
+basic non-standardsorted
+
+
+*/
+
+.r5  {
+		& > *:nth-child(n){ .get_size(2.4); .defaultreg }
+		& > :nth-child(5n+5){.newline}
+		& > :nth-child(5n+1){clear:left;}
+}
+.r7{
+		&  > *{ .get_size(1.714);.defaultreg}
+		&  > :nth-child(7n+7){.newline}
+		&  > :nth-child(7n+1){clear:left;}
+}
+.r8{
+		&  > *{ .get_size(1.5);.defaultreg}
+		&  > :nth-child(8n+8){.newline}
+		&  > :nth-child(8n+1){clear:left;}
+}
+.r9{
+		&  > *{ .get_size(1.333333334);.defaultreg}
+		&  > :nth-child(9n+9){.newline}
+		&  > :nth-child(9n+1){clear:left;}
+}
+
+
+/*
+
+double modules:
+
+*/
+
+.r7-5{
+		& > *:nth-child(n){.defaultreg}
+		& > :nth-child(2n+1){.get_size(7);}
+		& > :nth-child(2n+2){.get_size(5);.newline}
+}
+.r8-4{
+		& > *:nth-child(n){.defaultreg}
+		& > :nth-child(2n+1){.get_size(8);}
+		& > :nth-child(2n+2){.get_size(4);.newline}
+}
+.r9-3{
+		& > *:nth-child(n){.defaultreg}
+		& > :nth-child(2n+1){.get_size(9);}
+		& > :nth-child(2n+2){.get_size(3);.newline}
+}
+
+.r3-9{
+		& > *:nth-child(n){.defaultreg}
+		& > :nth-child(2n+1){.get_size(3);}
+		& > :nth-child(2n+2){.get_size(9);.newline}
+}
+.r4-8{
+		& > *:nth-child(n){.defaultreg}
+		& > :nth-child(2n+1){.get_size(4);}
+		& > :nth-child(2n+2){.get_size(8);.newline}
+}
+.r5-7{
+		& > *:nth-child(n){.defaultreg}
+		& > :nth-child(2n+1){.get_size(5);}
+		& > :nth-child(2n+2){.get_size(7);.newline}
+}
+
+.r2-10{
+		& > *:nth-child(n){.defaultreg}
+		& > :nth-child(2n+1){.get_size(2);}
+		& > :nth-child(2n+2){.get_size(10);.newline}	
+}
+.r10-2{
+		& > *:nth-child(n){.defaultreg}
+		& > :nth-child(2n+1){.get_size(10);}
+		& > :nth-child(2n+2){.get_size(2);.newline}			
+}
+
+.r1-11{
+		& > *:nth-child(n){.defaultreg}
+		& > :nth-child(2n+1){.get_size(1);}
+		& > :nth-child(2n+2){.get_size(11);.newline}	
+}
+.r11-1{
+		& > *:nth-child(n){.defaultreg}
+		& > :nth-child(2n+1){.get_size(11);}
+		& > :nth-child(2n+2){.get_size(1);.newline}			
+}
+
+/*
+
+tripple modules
+
+*/
+
+.r3-3-6{
+		& > *:nth-child(n){.get_size(3);.defaultreg}
+		& > :nth-child(3n+3){.get_size(6);.newline}
+}
+
+.r6-3-3{
+		& > *:nth-child(n){.get_size(3);.defaultreg}
+		& > :nth-child(3n+1){.get_size(6);}
+		& > :nth-child(3n+3){.newline}
+}
+.r3-6-3{
+		& > *:nth-child(n){.get_size(3);.defaultreg}
+		& > :nth-child(3n+2){.get_size(6);}
+		& > :nth-child(3n+3){.newline}
+}
+
+
+.r4-5-3{
+		& > :nth-child(3n+1){.get_size(4);}
+		& > :nth-child(3n+2){.get_size(5);}
+		& > :nth-child(3n+3){.get_size(3);.newline}
+}
+.r3-5-4{
+		& > *:nth-child(n){.defaultreg}
+		& > :nth-child(3n+1){.get_size(3);}
+		& > :nth-child(3n+2){.get_size(5);}
+		& > :nth-child(3n+3){.get_size(4);.newline}
+}
+
+.r5-4-3{
+		& > *:nth-child(n){.defaultreg}
+		& > :nth-child(3n+1){.get_size(5);}
+		& > :nth-child(3n+2){.get_size(3);}
+		& > :nth-child(3n+3){.get_size(4);.newline}
+}
+
+.r5-3-4{
+		& > *:nth-child(n){.defaultreg}
+		& > :nth-child(3n+1){.get_size(5);}
+		& > :nth-child(3n+2){.get_size(3);}
+		& > :nth-child(3n+3){.get_size(4);.newline}
+}
+
+
+.r4-6-2{
+		& > *:nth-child(n){.defaultreg}	
+		& > :nth-child(3n+1){.get_size(4);}
+		& > :nth-child(3n+2){.get_size(6);}
+		& > :nth-child(3n+3){.get_size(2);.newline}
+}
+
+.r4-2-6{
+		& > *:nth-child(n){.defaultreg}	
+		& > :nth-child(3n+1){.get_size(4);}
+		& > :nth-child(3n+2){.get_size(2);}
+		& > :nth-child(3n+3){.get_size(6);.newline}
+}
+
+.r6-4-2{
+		& > *:nth-child(n){.defaultreg}	
+		& > :nth-child(3n+1){.get_size(6);}
+		& > :nth-child(3n+2){.get_size(4);}
+		& > :nth-child(3n+3){.get_size(2);.newline}
+}
+.r2-4-6{
+		& > *:nth-child(n){.defaultreg}	
+		& > :nth-child(3n+1){.get_size(2);}
+		& > :nth-child(3n+2){.get_size(4);}
+		& > :nth-child(3n+3){.get_size(6);.newline}
+}

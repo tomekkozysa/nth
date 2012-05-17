@@ -1,0 +1,549 @@
+/* 
+	a quick reset. use what you like. 
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+/* percentge setting for the gutter, interesting possibilities are created with gutter 0 and padding applied instead */
+/* 
+		for now is best to keep below setting, 
+		it may make sense in the future to experiment.
+*/
+/*
+ 		a tiny bit of branding here:
+
+*/
+.container {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.reg {
+  overflow: hidden;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.reg img {
+  display: block;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+.defaultreg {
+  clear: none;
+  float: left;
+  margin-right: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.reg > * {
+  display: block;
+  clear: none;
+  float: left;
+  margin-right: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-right: 0%;
+  padding: 0 10px;
+}
+.reg > *.reg {
+  padding: 0;
+}
+.newline {
+  margin-right: 0;
+}
+/*
+
+basic modules:
+
+*/
+.r1  > *:nth-child(n) {
+  width: 100%;
+  margin-right: 0;
+}
+.r2  > *:nth-child(n) {
+  width: 50%;
+  clear: none;
+  float: left;
+  margin-right: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.r2  > *:nth-child(2n+2) {
+  margin-right: 0;
+}
+.r2  > *:nth-child(2n+1) {
+  clear: left;
+}
+.r3  > *:nth-child(n) {
+  width: 33.333333333333336%;
+  clear: none;
+  float: left;
+  margin-right: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.r3  > *:nth-child(3n+3) {
+  margin-right: 0;
+}
+.r3  > *:nth-child(3n+1) {
+  clear: left;
+}
+.r4  > *:nth-child(n) {
+  width: 25%;
+  clear: none;
+  float: left;
+  margin-right: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.r4  > :nth-child(4n+4) {
+  margin-right: 0;
+}
+.r4  > :nth-child(4n+1) {
+  clear: left;
+}
+.r6  > *:nth-child(n) {
+  width: 16.666666666666668%;
+  clear: none;
+  float: left;
+  margin-right: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.r6  > :nth-child(6n+6) {
+  margin-right: 0;
+}
+.r6  > :nth-child(6n+1) {
+  clear: left;
+}
+.r12  > *:nth-child(n) {
+  width: 8.333333333333334%;
+  clear: none;
+  float: left;
+  margin-right: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.r12  > :nth-child(12n+12) {
+  margin-right: 0;
+}
+.r12  > :nth-child(12n+1) {
+  clear: left;
+}
+/*
+
+basic non-standardsorted
+
+
+*/
+.r5  > *:nth-child(n) {
+  width: 20%;
+  clear: none;
+  float: left;
+  margin-right: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.r5  > :nth-child(5n+5) {
+  margin-right: 0;
+}
+.r5  > :nth-child(5n+1) {
+  clear: left;
+}
+.r7  > * {
+  width: 14.283333333333333%;
+  clear: none;
+  float: left;
+  margin-right: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.r7  > :nth-child(7n+7) {
+  margin-right: 0;
+}
+.r7  > :nth-child(7n+1) {
+  clear: left;
+}
+.r8  > * {
+  width: 12.5%;
+  clear: none;
+  float: left;
+  margin-right: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.r8  > :nth-child(8n+8) {
+  margin-right: 0;
+}
+.r8  > :nth-child(8n+1) {
+  clear: left;
+}
+.r9  > * {
+  width: 11.111111116666667%;
+  clear: none;
+  float: left;
+  margin-right: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.r9  > :nth-child(9n+9) {
+  margin-right: 0;
+}
+.r9  > :nth-child(9n+1) {
+  clear: left;
+}
+/*
+
+double modules:
+
+*/
+.r7-5  > *:nth-child(n) {
+  clear: none;
+  float: left;
+  margin-right: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.r7-5  > :nth-child(2n+1) {
+  width: 58.333333333333336%;
+}
+.r7-5  > :nth-child(2n+2) {
+  width: 41.66666666666667%;
+  margin-right: 0;
+}
+.r8-4  > *:nth-child(n) {
+  clear: none;
+  float: left;
+  margin-right: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.r8-4  > :nth-child(2n+1) {
+  width: 66.66666666666667%;
+}
+.r8-4  > :nth-child(2n+2) {
+  width: 33.333333333333336%;
+  margin-right: 0;
+}
+.r9-3  > *:nth-child(n) {
+  clear: none;
+  float: left;
+  margin-right: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.r9-3  > :nth-child(2n+1) {
+  width: 75%;
+}
+.r9-3  > :nth-child(2n+2) {
+  width: 25%;
+  margin-right: 0;
+}
+.r3-9  > *:nth-child(n) {
+  clear: none;
+  float: left;
+  margin-right: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.r3-9  > :nth-child(2n+1) {
+  width: 25%;
+}
+.r3-9  > :nth-child(2n+2) {
+  width: 75%;
+  margin-right: 0;
+}
+.r4-8  > *:nth-child(n) {
+  clear: none;
+  float: left;
+  margin-right: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.r4-8  > :nth-child(2n+1) {
+  width: 33.333333333333336%;
+}
+.r4-8  > :nth-child(2n+2) {
+  width: 66.66666666666667%;
+  margin-right: 0;
+}
+.r5-7  > *:nth-child(n) {
+  clear: none;
+  float: left;
+  margin-right: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.r5-7  > :nth-child(2n+1) {
+  width: 41.66666666666667%;
+}
+.r5-7  > :nth-child(2n+2) {
+  width: 58.333333333333336%;
+  margin-right: 0;
+}
+.r2-10  > *:nth-child(n) {
+  clear: none;
+  float: left;
+  margin-right: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.r2-10  > :nth-child(2n+1) {
+  width: 16.666666666666668%;
+}
+.r2-10  > :nth-child(2n+2) {
+  width: 83.33333333333334%;
+  margin-right: 0;
+}
+.r10-2  > *:nth-child(n) {
+  clear: none;
+  float: left;
+  margin-right: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.r10-2  > :nth-child(2n+1) {
+  width: 83.33333333333334%;
+}
+.r10-2  > :nth-child(2n+2) {
+  width: 16.666666666666668%;
+  margin-right: 0;
+}
+.r1-11  > *:nth-child(n) {
+  clear: none;
+  float: left;
+  margin-right: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.r1-11  > :nth-child(2n+1) {
+  width: 8.333333333333334%;
+}
+.r1-11  > :nth-child(2n+2) {
+  width: 91.66666666666667%;
+  margin-right: 0;
+}
+.r11-1  > *:nth-child(n) {
+  clear: none;
+  float: left;
+  margin-right: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.r11-1  > :nth-child(2n+1) {
+  width: 91.66666666666667%;
+}
+.r11-1  > :nth-child(2n+2) {
+  width: 8.333333333333334%;
+  margin-right: 0;
+}
+/*
+
+tripple modules
+
+*/
+.r3-3-6  > *:nth-child(n) {
+  width: 25%;
+  clear: none;
+  float: left;
+  margin-right: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.r3-3-6  > :nth-child(3n+3) {
+  width: 50%;
+  margin-right: 0;
+}
+.r6-3-3  > *:nth-child(n) {
+  width: 25%;
+  clear: none;
+  float: left;
+  margin-right: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.r6-3-3  > :nth-child(3n+1) {
+  width: 50%;
+}
+.r6-3-3  > :nth-child(3n+3) {
+  margin-right: 0;
+}
+.r3-6-3  > *:nth-child(n) {
+  width: 25%;
+  clear: none;
+  float: left;
+  margin-right: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.r3-6-3  > :nth-child(3n+2) {
+  width: 50%;
+}
+.r3-6-3  > :nth-child(3n+3) {
+  margin-right: 0;
+}
+.r4-5-3  > :nth-child(3n+1) {
+  width: 33.333333333333336%;
+}
+.r4-5-3  > :nth-child(3n+2) {
+  width: 41.66666666666667%;
+}
+.r4-5-3  > :nth-child(3n+3) {
+  width: 25%;
+  margin-right: 0;
+}
+.r3-5-4  > *:nth-child(n) {
+  clear: none;
+  float: left;
+  margin-right: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.r3-5-4  > :nth-child(3n+1) {
+  width: 25%;
+}
+.r3-5-4  > :nth-child(3n+2) {
+  width: 41.66666666666667%;
+}
+.r3-5-4  > :nth-child(3n+3) {
+  width: 33.333333333333336%;
+  margin-right: 0;
+}
+.r5-4-3  > *:nth-child(n) {
+  clear: none;
+  float: left;
+  margin-right: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.r5-4-3  > :nth-child(3n+1) {
+  width: 41.66666666666667%;
+}
+.r5-4-3  > :nth-child(3n+2) {
+  width: 25%;
+}
+.r5-4-3  > :nth-child(3n+3) {
+  width: 33.333333333333336%;
+  margin-right: 0;
+}
+.r5-3-4  > *:nth-child(n) {
+  clear: none;
+  float: left;
+  margin-right: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.r5-3-4  > :nth-child(3n+1) {
+  width: 41.66666666666667%;
+}
+.r5-3-4  > :nth-child(3n+2) {
+  width: 25%;
+}
+.r5-3-4  > :nth-child(3n+3) {
+  width: 33.333333333333336%;
+  margin-right: 0;
+}
+.r4-6-2  > *:nth-child(n) {
+  clear: none;
+  float: left;
+  margin-right: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.r4-6-2  > :nth-child(3n+1) {
+  width: 33.333333333333336%;
+}
+.r4-6-2  > :nth-child(3n+2) {
+  width: 50%;
+}
+.r4-6-2  > :nth-child(3n+3) {
+  width: 16.666666666666668%;
+  margin-right: 0;
+}
+.r4-2-6  > *:nth-child(n) {
+  clear: none;
+  float: left;
+  margin-right: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.r4-2-6  > :nth-child(3n+1) {
+  width: 33.333333333333336%;
+}
+.r4-2-6  > :nth-child(3n+2) {
+  width: 16.666666666666668%;
+}
+.r4-2-6  > :nth-child(3n+3) {
+  width: 50%;
+  margin-right: 0;
+}
+.r6-4-2  > *:nth-child(n) {
+  clear: none;
+  float: left;
+  margin-right: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.r6-4-2  > :nth-child(3n+1) {
+  width: 50%;
+}
+.r6-4-2  > :nth-child(3n+2) {
+  width: 33.333333333333336%;
+}
+.r6-4-2  > :nth-child(3n+3) {
+  width: 16.666666666666668%;
+  margin-right: 0;
+}
+.r2-4-6  > *:nth-child(n) {
+  clear: none;
+  float: left;
+  margin-right: 0%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.r2-4-6  > :nth-child(3n+1) {
+  width: 16.666666666666668%;
+}
+.r2-4-6  > :nth-child(3n+2) {
+  width: 33.333333333333336%;
+}
+.r2-4-6  > :nth-child(3n+3) {
+  width: 50%;
+  margin-right: 0;
+}

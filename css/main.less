@@ -1,0 +1,184 @@
+// ==========================================================
+
+// 320 and Up by Andy Clarke
+// Version: 3.0
+// URL: http://stuffandnonsense.co.uk/projects/320andup/
+// Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+
+// ==========================================================
+
+/* Reset =================================================== */
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video { margin : 0; padding : 0; border : 0; outline : 0; font-size : 100%;
+vertical-align : baseline; background : transparent; }									
+
+article, aside, figure, footer, header, hgroup, nav, section { display : block; }
+
+/*
+
+Any reset files to be placed in before nth
+
+*/
+
+@import "nth.less";
+@import "basic.less";
+
+*{line-height:20px;}
+/*
+
+LAYOUT
+
+*/
+
+.container{width:100%; padding:20px;max-width:1600px;margin:0 auto;}
+
+/*
+
+COLORS
+
+*/
+body{color:@copycolor;background:@lightbgr;}
+
+/*
+
+TYPOGRAPHY
+
+*/
+
+body{.helv;.regular; }
+
+h1{.large}
+h2{.medium}
+h3{.medium}
+h4{.medium}
+h5{.small}
+h1,h2,h3,h4,h5,h6{margin-bottom:20px;}
+p{margin-bottom:10px;}
+p+p{margin-bottom:20px;}
+
+.home .intro p{max-width:650px;font-size:18px;line-height:22.5px;}
+
+
+.code{padding:20px;background:#fff;font-size:16px;margin-bottom:20px}
+pre {.code; white-space:pre-line;}
+
+.home .icons article{padding:10px; }
+.home .icons img{width:25%;height:auto;margin:100px auto;display:block;}
+
+.nth-logo{color:#000;font-family:'Helvetice Neue',Arial,serif;font-weight:bold;font-size:36px;letter-spacing:-1px;text-decoration:none;margin-bottom:20px} 
+.nth-logo sup{font-size:30%;text-transform:uppercase;letter-spacing:0px;position:relative;top:-20px;}
+.nth-logo sup:after{content:":)";}.nth-logo:hover sup:after{content:";)";}
+.nth-logo a{text-decoration:none;&:hover{color:#fff;}}
+
+
+
+/*
+
+UI
+
+
+*/
+
+@ui-color:#222;
+a{text-decoration:underline;color:#222;}
+.action{text-decoration:none;margin-bottom:20px;display:inline-block;.actionthemebasic;}
+.action.tiny{margin-bottom:5px;display:inline-block;	padding:2px 5px;font-size:13px;	}
+.actionthemebasic{
+	padding:20px;	
+	color:#eee;
+
+	background:#222;
+	/**/
+	font-size:16px;
+	text-transform:lowercase;
+	
+}
+.actionthemebasic:hover{}
+.action:hover{ background:#fff;color:#222;}
+
+.im{background:rgba(0,255,0,1);height:100%;}
+.im2{background:rgba(0,0,255,.3);height:100%}
+
+#main {position:relative;z-index:10;}
+#grid_debug {position:absolute;z-index:1;width:100%;margin:0px auto 0;display:block;}
+#grid_debug .im{background:transparent;border:1px solid rgba(255,0,255,.1);border-width:0 1px;padding-top:0;padding-bottom:100px;}
+
+
+
+
+/* js elements for insights
+.sizecheck{ background:#eee;color:#000;font-size:11px;position:absolute;top:5px;right:5px;}
+
+ */
+
+	
+
+
+/*
+
+
+
+*/
+/* Smartphones */
+@media screen and (min-width : 320px) and (max-width : 480px) {
+	
+	.container{width:100%;padding:5px;}
+	.reg > *{padding:0 10px;}
+	.reg > *.reg{padding:0}
+	.icons{.r1;}
+	.home header{.r1} 
+	.home header hgroup{.reg; .r2;}
+	.home header .action{float:right;}
+
+	.demo {
+		.m4-8{.r4-8;}
+		.m4{.r4;}
+		.m3{.r3;}
+		.m2{.r2;}
+		.m1{.r1;}
+		.mh{display:none;}
+	}
+	
+	.mh{display:none;}
+
+}
+
+/* Smartphones - landscape */ 
+@media screen and (min-width : 320px) and (max-width : 480px) and (orientation:landscape) {
+	
+	.container{width:100%;padding:5px;}
+	.home .icons article{margin-bottom:40px;}
+	.home .icons figure {.reg;.r2-10;margin-bottom:20px;}
+	.home .icons h2 {margin-bottom:0px;border:0;padding:10px 0 10px 20px;}
+	.home .icons img{padding:5px;margin:0px;}
+	.reg > * {padding:0 5px 5px;}
+	
+}
+
+@media screen and (min-width : 481px) and (max-width : 800px){
+	.icons{.r2;}
+	article img{width:25%;}
+	.home header{.r1} 
+	.home header hgroup{.reg; .r2}
+	.home header .action{float:right;}
+	.demo {
+		.m4-8{.r4-8;}
+		.m4{.r4;}
+		.m3{.r3;}
+		.m2{.r2;}
+		.m1{.r1;}
+		.mh{display:none;}
+	}
+	
+
+}
+
+
+
+@media screen and (min-width : 800px) {
+	.container{width:80%;min-width:800px;max-width:1400px;padding:20px;}
+	.icons{.r4;}
+	.home header .action{float:none;}
+}
+
+
